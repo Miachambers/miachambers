@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mia Chambers | Actor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .accent-pink { background-color: #f472b6; }
+        .text-accent-pink { color: #f472b6; }
+        .border-accent-pink { border-color: #f472b6; }
+        .light-pink-bg { background-color: #fce7f3; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.4s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); align-items: center; justify-content: center; }
+    </style>
+</head>
+<body class="bg-white text-gray-800 font-sans leading-relaxed">
+
+    <div id="myStoryModal" class="modal">
+        <div class="bg-white p-8 rounded-2xl max-w-lg w-11/12 shadow-2xl relative">
+            <button id="closeModal" class="absolute top-4 right-4 text-gray-400 text-2xl">&times;</button>
+            <h3 class="text-2xl font-bold text-accent-pink mb-4">About Me</h3>
+            <p class="text-gray-600">
+                I am a 14-year-old actor based in London, dedicated to bringing authenticity and depth to every role. I focus on technical discipline and grounded performances for the screen.
+            </p>
+        </div>
+    </div>
+
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold tracking-tight uppercase">Mia Chambers</h1>
+            <div class="hidden sm:flex space-x-8 text-xs font-bold uppercase tracking-widest text-gray-500">
+                <a href="#monologues" class="hover:text-accent-pink">Range</a>
+                <a href="#experience" class="hover:text-accent-pink">Experience</a>
+                <a href="#contact" class="hover:text-accent-pink">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        
+        <section class="text-center py-16 mb-16">
+            <h2 class="text-5xl sm:text-7xl font-black mb-4 tracking-tighter uppercase">MIA CHAMBERS</h2>
+            <p class="text-lg text-gray-500 font-medium mb-10 tracking-widest uppercase">Actor | 14 Years Old | London</p>
+            <div class="flex justify-center gap-4">
+                <a href="#monologues" class="accent-pink text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-pink-500 transition">View Reels</a>
+                <button id="openStory" class="border-2 border-accent-pink text-accent-pink px-8 py-3 rounded-full font-bold hover:bg-pink-50 transition">My Story</button>
+            </div>
+        </section>
+
+        <section id="experience" class="mb-20">
+            <h2 class="text-2xl font-black mb-8 border-l-4 border-accent-pink pl-4 uppercase tracking-wider">Professional Experience</h2>
+            <div class="space-y-4">
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 flex justify-between items-center">
+                    <div>
+                        <h4 class="font-bold text-lg">Apple TV+ Project</h4>
+                        <p class="text-gray-500 italic text-sm">Featured Background Talent</p>
+                    </div>
+                    <span class="text-[10px] font-black bg-blue-100 text-blue-600 px-3 py-1 rounded-full uppercase">Industry</span>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
+                    <h4 class="font-bold text-lg text-gray-800">Medical Drama (Academy)</h4>
+                    <p class="text-gray-500 text-sm">Role: Sister (Lead)</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
+                    <h4 class="font-bold text-lg text-gray-800">1980s Period Piece (Academy)</h4>
+                    <p class="text-gray-500 text-sm">Role: Micksy (Lead)</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
+                    <h4 class="font-bold text-lg text-gray-800">Oliver!</h4>
+                    <p class="text-gray-500 text-sm">Role: Mr. Brownlow | Local Theatre</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="monologues" class="mb-20">
+            <h2 class="text-2xl font-black mb-8 border-l-4 border-accent-pink pl-4 uppercase tracking-wider">Performance Showcase</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="https://youtu.be/f6Zdc7cUOTY" target="_blank" class="light-pink-bg p-10 rounded-2xl border-2 border-accent-pink block hover:scale-[1.02] transition shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Comedic / Sarcastic</h3>
+                    <p class="text-gray-600 font-medium italic">Princess Diaries (Mia T.)</p>
+                </a>
+                <a href="#" target="_blank" class="bg-gray-50 p-10 rounded-2xl border-2 border-gray-200 block hover:scale-[1.02] transition">
+                    <h3 class="text-xl font-bold mb-2 text-gray-400">Dramatic / Serious</h3>
+                    <p class="text-gray-400 font-medium italic">Annabeth Chase (Percy Jackson)</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="profile" class="mb-20">
+            <div class="bg-white border border-gray-100 p-8 rounded-2xl shadow-sm">
+                <div class="flex gap-8 border-b mb-8">
+                    <button class="tab-btn pb-4 font-bold text-accent-pink border-b-2 border-accent-pink" data-target="vitals">Vitals</button>
+                    <button class="tab-btn pb-4 font-bold text-gray-400" data-target="skills">Skills</button>
+                </div>
+                <div id="vitals" class="tab-content active grid grid-cols-2 gap-6">
+                    <div><p class="text-xs font-black uppercase text-gray-400">Playing Age</p><p class="font-bold">13 - 16</p></div>
+                    <div><p class="text-xs font-black uppercase text-gray-400">Height</p><p class="font-bold">5'6" (167cm)</p></div>
+                    <div><p class="text-xs font-black uppercase text-gray-400">Accents</p><p class="font-bold">London, RP, US Standard</p></div>
+                    <div><p class="text-xs font-black uppercase text-gray-400">Voice</p><p class="font-bold">Alto / Mezzo-Soprano</p></div>
+                </div>
+                <div id="skills" class="tab-content grid grid-cols-2 gap-6">
+                    <p class="font-medium">• Confident Swimmer</p>
+                    <p class="font-medium">• Novice Horse Riding</p>
+                    <p class="font-medium">• Professional Self-Taping</p>
+                    <p class="font-medium">• Technical Video Editing</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="accent-pink text-white p-12 rounded-3xl text-center shadow-2xl">
+            <h2 class="text-4xl font-black mb-2 uppercase tracking-tight">Tracey Andrews</h2>
+            <p class="text-lg opacity-90 mb-10 italic">Representation & Talent Management</p>
+            <a href="https://traceyandrewstalent.com" target="_blank" class="bg-white text-accent-pink px-12 py-4 rounded-full font-black text-xl hover:shadow-xl transition inline-block">
+                Visit Agency Site
+            </a>
+        </section>
+    </main>
+
+    <footer class="py-12 text-center text-gray-400 text-[10px] uppercase tracking-[0.4em]">
+        &copy; 2025 Mia Chambers | All Rights Reserved
+    </footer>
+
+    <script>
+        const modal = document.getElementById("myStoryModal");
+        document.getElementById("openStory").onclick = () => modal.style.display = "flex";
+        document.getElementById("closeModal").onclick = () => modal.style.display = "none";
+        window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; }
+
+        const tabs = document.querySelectorAll('.tab-btn');
+        tabs.forEach(tab => {
+            tab.onclick = () => {
+                tabs.forEach(t => t.classList.remove('text-accent-pink', 'border-accent-pink'));
+                tab.classList.add('text-accent-pink', 'border-accent-pink');
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                document.getElementById(tab.dataset.target).classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
